@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import IntroHeader from './components/introHeader/introHeader';
-import DetailIntro from './components/detailIntro/detailIntro';
+import IntroHeader from './components/introHeader/IntroHeader';
+import DetailIntro from './components/detailIntro/DetailIntro';
 import './App.scss';
 
 class App extends Component {

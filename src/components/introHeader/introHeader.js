@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './introHeader.scss';
+import './IntroHeader.scss';
 
 export default class IntroHeader extends Component {
   render() {

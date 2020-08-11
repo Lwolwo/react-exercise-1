@@ -1,8 +1,35 @@
 import React, { Component } from 'react';
-import './detailIntro.scss';
+import Experience from './experience/Experience';
+import './DetailIntro.scss';
 
 export default class DetailIntro extends Component {
   render() {
+    const infos = [
+      {
+        year: 1990,
+        title: 'I was born in Katowice',
+        detail:
+          'Labore ea aliquip sint laboris exercitation magna anim. Mollit aliqua fugiat aliquip tempor id cillum dolore in. Ex aliqua incididunt et in est voluptate in minim mollit nisi. Quis cupidatat Lorem aliqua minim veniam fugiat tempor proident aliquip veniam reprehenderit. Nisi excepteur reprehenderit enim et aliqua cillum anim enim non nisi.',
+      },
+      {
+        year: 2005,
+        title: 'Secondary school specializing in artistic',
+        detail:
+          'Est consequat reprehenderit nisi id elit adipisicing veniam enim anim.',
+      },
+      {
+        year: 2009,
+        title: 'First level graduation in Graphic Design',
+        detail:
+          'Consectetur laboris anim cupidatat sit adipisicing velit dolor.Amet in eu qui id amet id.',
+      },
+      {
+        year: 2012,
+        title: 'Second level graduation in Graphic Design',
+        detail:
+          'Sit aute commodo sunt sit.Lorem id ex occaecat fugiat esse consequat exercitation ex in commodo id.Deserunt consequat eiusmod officia nulla amet labore non laborum ullamco voluptate in consectetur.',
+      },
+    ];
     return (
       <div className="detailIntro">
         <div className="about">
@@ -18,57 +45,14 @@ export default class DetailIntro extends Component {
         </div>
         <div className="education">
           <h3>EDUCATION</h3>
-          <div className="experience">
-            <p className="year">1990</p>
-            <div className="describe">
-              <p className="title">I was born in Katowice</p>
-              <p className="detail">
-                Duis consequat ipsum excepteur consectetur amet dolore ipsum
-                irure cillum enim duis et est enim. Non reprehenderit aliquip
-                labore ad enim nulla aliquip consequat nostrud ipsum incididunt
-                fugiat ipsum. Consectetur voluptate consequat duis aute.
-                Excepteur ipsum tempor commodo aliquip non eu. Velit ut ut
-                dolore sint voluptate.
-              </p>
-            </div>
-          </div>
-          <div className="experience">
-            <p className="year">2005</p>
-            <div className="describe">
-              <p className="title">Secondary school specializing in artistic</p>
-              <p className="detail">
-                Duis consequat ipsum excepteur consectetur amet dolore ipsum
-                irure cillum enim duis et est enim. Non reprehenderit aliquip
-                labore ad enim nulla aliquip consequat nostrud ipsum incididunt
-                fugiat ipsum. Consectetur voluptate consequat duis aute.
-                Excepteur ipsum tempor commodo aliquip non eu. Velit ut ut
-                dolore sint voluptate.
-              </p>
-            </div>
-          </div>
-          <div className="experience">
-            <p className="year">2009</p>
-            <div className="describe">
-              <p className="title">First level graduation in Graphic Design</p>
-              <p className="detail">
-                Fugiat consequat aute esse ullamco ullamco ea magna enim laborum
-                ad. Officia occaecat excepteur amet ea. Mollit ut aliquip esse
-                consectetur magna sit deserunt.
-              </p>
-            </div>
-          </div>
-          <div className="experience">
-            <p className="year">2012</p>
-            <div className="describe">
-              <p className="title">Second level graduation in Graphic Design</p>
-              <p className="detail">
-                Duis consequat ipsum excepteur consectetur amet dolore ipsum
-                irure cillum enim duis et est enim. Non reprehenderit aliquip
-                labore ad enim nulla aliquip consequat nostrud ipsum incididunt
-                fugiat ipsum.
-              </p>
-            </div>
-          </div>
+          {infos.map((item, index) => (
+            <Experience
+              key={index}
+              year={item.year}
+              title={item.title}
+              detail={item.detail}
+            />
+          ))}
         </div>
       </div>
     );

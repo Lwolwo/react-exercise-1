@@ -1,0 +1,21 @@
+@import '../../../styles/variables.scss';
+
+.experience {
+  display: flex;
+  margin-bottom: 20px;
+
+  .year {
+    width: 10%;
+    font-weight: bold;
+  }
+
+  .describe {
+    width: 90%;
+    background-color: $gray;
+    padding: 10px 5px;
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }
+}
